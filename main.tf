@@ -1,6 +1,9 @@
 terraform {
   backend "s3" {}
 }
+provider "aws" {
+  region = "us-east-1"
+}
 resource "aws_cloudformation_stack" "dms-stack" {
   name = "dms-cf-stack-2"
 
