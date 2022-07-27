@@ -1,3 +1,6 @@
+terraform {
+  backend "s3" {}
+}
 resource "aws_cloudformation_stack" "dms-stack" {
   name = "dms-cf-stack-2"
 
